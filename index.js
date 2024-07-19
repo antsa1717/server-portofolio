@@ -5,12 +5,14 @@ const cors = require('cors');
 //instanciations
 const test = require("./routes/test");
 const skill = require("./routes/skill");
+const formations = require("./routes/formations");
 
 app.use(cors());
 app.use(express.json());
 
 app.use("/test",test);
 app.use("/skill",skill);
+app.use("/formations",formations)
 
 const PORT = process.env.PORT || '9001';
 app.listen(PORT , () => {
